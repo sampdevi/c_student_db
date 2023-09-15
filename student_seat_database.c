@@ -43,11 +43,11 @@ int initializeAppData() {
 int editStudentDatabase() {
     printf("\n[EDIT STUDENT DATABASE]\n");
 
-    int seatAssignedCount[5] = {4};
+    int seatAssignedCount[5] = {4, 4, 4, 4, 4};
     for(int i = 0; i < 5; i++)
     {
         for(int d = 0; d < 4; d++) {
-            if(!strcmp("Unassigned", seatArr[i][d])) seatAssignedCount[i]--;
+            if(strcmp("Unassigned", seatArr[i][d])) seatAssignedCount[i]--;
         }
     }
     for(int i = 0; i < 5; i++) {
